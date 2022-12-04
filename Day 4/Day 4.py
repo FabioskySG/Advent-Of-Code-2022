@@ -23,6 +23,7 @@ def day4_2():
         first_elf = splitted[0].split("-")
         second_elf = splitted[1].split("-")
 
+        '''
         if (int(first_elf[1]) >= int(second_elf[0]) and int(first_elf[1]) <= int(second_elf[1])) or (int(second_elf[0]) >= int(first_elf[0]) and int(second_elf[0]) <= int(first_elf[1])):
             overlaps += 1
         
@@ -31,6 +32,10 @@ def day4_2():
 
         # Checkeo valores iguales
         elif ((int(first_elf[0]) == int(second_elf[1])) or (int(first_elf[1]) == int(second_elf[0])) or (int(first_elf[0]) == int(second_elf[1])) or (int(first_elf[1]) == int(second_elf[1]))):
+            overlaps += 1
+        '''
+
+        if (int(first_elf[1]) >= int(second_elf[0]) and (int(first_elf[0]) <= int(second_elf[1]))):
             overlaps += 1
 
     print(overlaps)
